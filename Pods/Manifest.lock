@@ -1,0 +1,15 @@
+PODS:
+  - Alamofire (4.0.1)
+  - Simplicity (2.0.1)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.0)
+  - Simplicity
+
+SPEC CHECKSUMS:
+  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  Simplicity: 58ce0c6569baf45e48ccd25432274ae899097517
+
+PODFILE CHECKSUM: e70d225d5307c90fad8b2a9c211e2af554e26393
+
+COCOAPODS: 1.2.0.beta.1
