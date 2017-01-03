@@ -21,6 +21,7 @@ class FacebookConnectedController: UIViewController {
 func viewDidLoad() {
     viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
+     
 }
 
 func didReceiveMemoryWarning() {
