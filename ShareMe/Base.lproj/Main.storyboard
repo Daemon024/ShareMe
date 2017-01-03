@@ -35,11 +35,21 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yvW-AF-dja">
                                 <frame key="frameInset" minX="118" minY="364" width="140" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Commencer">
+                                <state key="normal" title="Facebook">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
                                 <connections>
                                     <segue destination="dlr-ic-hXw" kind="show" id="ds3-3m-8mQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRH-H4-9SB">
+                                <frame key="frameInset" minX="145" minY="401" width="86" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Linkedin">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="60l-Kp-J0N" kind="show" id="ZWD-aJ-KPK"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -52,6 +62,52 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="85.599999999999994" y="64.31784107946028"/>
+        </scene>
+        <!--Linkedin Connected Controller-->
+        <scene sceneID="IjQ-bW-Zw3">
+            <objects>
+                <viewController id="60l-Kp-J0N" customClass="LinkedinConnectedController" customModule="ShareMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xd4-Id-x4E"/>
+                        <viewControllerLayoutGuide type="bottom" id="G7p-Ob-14r"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZnL-2Z-m2r">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqd-8i-G5p">
+                                <frame key="frameInset" minX="91" minY="233" width="193" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="LinkedIn"/>
+                                <connections>
+                                    <action selector="setText:" destination="60l-Kp-J0N" eventType="touchUpInside" id="LwV-Gl-8T2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MrW-p8-D9j">
+                                <frame key="frameInset" minX="16" minY="617" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Retour"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="50Q-nL-5zx"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="coucou" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCE-Qk-4gP">
+                                <frame key="frameInset" minX="155" minY="323" width="57" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.28624789093863257" green="0.56335112983732949" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="ReceiveText" destination="HCE-Qk-4gP" id="Zko-3B-ZWH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rea-r8-efI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="95" y="751"/>
         </scene>
         <!--Facebook Connected Controller-->
         <scene sceneID="8aB-6B-0Kc">
@@ -154,5 +210,9 @@
     <resources>
         <image name="2000px-Facebook_icon_2013.svg" width="2000" height="2000"/>
         <image name="Image-1" width="110" height="108"/>
+        <image name="LinkedIn" width="193" height="43"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="50Q-nL-5zx"/>
+    </inferredMetricsTieBreakers>
 </document>

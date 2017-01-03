@@ -19,6 +19,7 @@
 		52E3F9D71DAAD38E00D2C0B7 /* ShareMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E3F9D61DAAD38E00D2C0B7 /* ShareMeTests.swift */; };
 		52E3F9E21DAAD38E00D2C0B7 /* ShareMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E3F9E11DAAD38E00D2C0B7 /* ShareMeUITests.swift */; };
 		77223A37BB30543466F19842 /* Pods_ShareMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECA0DD14100D6E66DB53A773 /* Pods_ShareMe.framework */; };
+		8B2034941E1C123500BCC7C0 /* LinkedinController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2034931E1C123500BCC7C0 /* LinkedinController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		52E3F9E31DAAD38E00D2C0B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		687E48FE75AF5AD982B97F04 /* Pods_ShareMeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShareMeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71F692E1A1492BA566DDF8DC /* Pods-ShareMeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareMeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShareMeUITests/Pods-ShareMeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8B2034931E1C123500BCC7C0 /* LinkedinController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedinController.swift; sourceTree = "<group>"; };
 		B5A1DF76DA4B51B773CB5B38 /* Pods-ShareMeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareMeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShareMeUITests/Pods-ShareMeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D66EA05EDF793A5BDDDCECD9 /* Pods-ShareMeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareMeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShareMeTests/Pods-ShareMeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D730EF7B025FF7D5E860FCDA /* Pods-ShareMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShareMe/Pods-ShareMe.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				52E3F9CD1DAAD38D00D2C0B7 /* Info.plist */,
 				52CE787E1DAAECE700E78FBE /* FacebookController.swift */,
 				52588EFD1DAAF648006E4100 /* FacebookConnectedController.swift */,
+				8B2034931E1C123500BCC7C0 /* LinkedinController.swift */,
 			);
 			path = ShareMe;
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52CE787F1DAAECE700E78FBE /* FacebookController.swift in Sources */,
+				8B2034941E1C123500BCC7C0 /* LinkedinController.swift in Sources */,
 				52E3F9C41DAAD38D00D2C0B7 /* ViewController.swift in Sources */,
 				52E3F9C21DAAD38D00D2C0B7 /* AppDelegate.swift in Sources */,
 				52588EFE1DAAF648006E4100 /* FacebookConnectedController.swift in Sources */,
