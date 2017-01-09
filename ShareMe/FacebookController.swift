@@ -9,32 +9,22 @@
 import UIKit
 import Alamofire
 import Simplicity
+import SwiftyJSON
 var isConnected = 0;
-var idFB = "629906840517434";
+var idFB = "";
 var jsonString : String = String()
-class FacebookController: UIViewController {
-    
+class FacebookController: UIViewController  {
     @IBOutlet weak var login: UIButton!
     @IBAction func login(_ sender: Any) {
         Simplicity.login(Facebook()) { (accessToken, error) in
             Alamofire.request("https://graph.facebook.com/me?access_token="+accessToken!).responseJSON { response in
-                print(response.request!)  // original URL request
-                print(response.response!) // HTTP URL response
-                print(response.data!)     // server data
-                print(response.result)   // result of response serialization
-                let FacebookID = response.data
-             
+                let JSON2 = JSON(response.result.value)
+                idFB = JSON2["id"].string!
                 isConnected = 1;
                 self.connected()
                // performSegue(withIdentifier: "fbConnected", sender: nil)
-                if let JSON = response.result.value {
-                    print("JSON: \(JSON)")
-//                    idFB = "629906840517434"
-//                    idFB = JSON["id"].stringValue as! [String:AnyObject]
-                    print(idFB)
-                    
-                }
-            }
+                
+        }
         }
 
     }

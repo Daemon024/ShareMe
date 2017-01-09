@@ -251,6 +251,7 @@
 				TargetAttributes = {
 					52E3F9BD1DAAD38D00D2C0B7 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = WFCVQTFG4N;
 						ProvisioningStyle = Automatic;
 					};
 					52E3F9D11DAAD38E00D2C0B7 = {
@@ -612,7 +613,7 @@
 			baseConfigurationReference = D730EF7B025FF7D5E860FCDA /* Pods-ShareMe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = WFCVQTFG4N;
 				INFOPLIST_FILE = ShareMe/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -627,7 +628,7 @@
 			baseConfigurationReference = 2AD2F7B0230C79DC13E3CD78 /* Pods-ShareMe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = WFCVQTFG4N;
 				INFOPLIST_FILE = ShareMe/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
