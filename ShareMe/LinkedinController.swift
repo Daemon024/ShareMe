@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import LinkedinSwift
 class LinkedinConnectedController: UIViewController {
   
     @IBAction func setText(_ sender: UIButton) {
@@ -15,4 +16,9 @@ class LinkedinConnectedController: UIViewController {
     }
     @IBOutlet weak var ReceiveText: UILabel!
     
+    let linkedinHelper = LinkedinSwiftHelper(configuration:
+        LinkedinSwiftConfiguration(
+
+       )
+    )
 }

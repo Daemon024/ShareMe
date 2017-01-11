@@ -20,6 +20,7 @@ class FacebookController: UIViewController  {
             Alamofire.request("https://graph.facebook.com/me?access_token="+accessToken!).responseJSON { response in
                 let JSON2 = JSON(response.result.value)
                 idFB = JSON2["id"].string!
+                print(idFB)
                 isConnected = 1;
                 self.connected()
                // performSegue(withIdentifier: "fbConnected", sender: nil)
@@ -30,7 +31,7 @@ class FacebookController: UIViewController  {
     }
     func connected() {
         if isConnected == 1 {
-            performSegue(withIdentifier: "fbConnected", sender: nil)
+            performSegue(withIdentifier: "fbConnected", sender: idFB)
         }
     }
 

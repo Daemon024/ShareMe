@@ -25,6 +25,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        // Linkedin sdk handle redirect
+        //if LinkedinSwiftHelper.shouldHandle(url) {
+          //  return LinkedinSwiftHelper.application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
+       // }
+        
         return Simplicity.application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
     }
 

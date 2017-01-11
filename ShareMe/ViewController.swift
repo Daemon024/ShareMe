@@ -8,11 +8,16 @@
 
 import UIKit
 import Simplicity
-var idFacebook = "";
 class ViewController: UIViewController {
+    @IBOutlet weak var fbinfos: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        if fullFBUrl == nil {
+        } else if fullFBUrl != nil {
+             fbinfos.text = fullFBUrl
+        }
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 

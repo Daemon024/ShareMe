@@ -40,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		17C7E5EF1E267DB600099C0A /* ObjectiveCHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectiveCHeader.h; sourceTree = "<group>"; };
 		1BFDD517A0DC23EFC853B235 /* Pods-ShareMeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareMeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShareMeTests/Pods-ShareMeTests.release.xcconfig"; sourceTree = "<group>"; };
 		2AD2F7B0230C79DC13E3CD78 /* Pods-ShareMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShareMe/Pods-ShareMe.release.xcconfig"; sourceTree = "<group>"; };
 		3569CF081CE08BD53EE270BE /* Pods_ShareMeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShareMeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +121,7 @@
 		52E3F9C01DAAD38D00D2C0B7 /* ShareMe */ = {
 			isa = PBXGroup;
 			children = (
+				17C7E5EF1E267DB600099C0A /* ObjectiveCHeader.h */,
 				52E3F9C11DAAD38D00D2C0B7 /* AppDelegate.swift */,
 				52E3F9C31DAAD38D00D2C0B7 /* ViewController.swift */,
 				52E3F9C51DAAD38D00D2C0B7 /* Main.storyboard */,
@@ -619,6 +621,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test29839892832.ShareMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/ShareMe/ObjectiveCHeader.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -634,6 +637,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test29839892832.ShareMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/ShareMe/ObjectiveCHeader.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

@@ -8,6 +8,7 @@ target 'ShareMe' do
   # Pods for ShareMe
 pod 'Simplicity'
 pod 'SwiftyJSON'
+pod 'LinkedinSwift', '~> 1.6.6'
 pod 'Alamofire', '~> 4.0'
   target 'ShareMeTests' do
     inherit! :search_paths
