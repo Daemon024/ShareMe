@@ -21,8 +21,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey: Any]) -> Bool {
-        return Simplicity.application(app, open: url, options: options)
+        if Simplicity.application(app, open: url, options: options){
+            return Simplicity.application(app, open: url, options: options)
+        }
+        if LISDKCallbackHandler.shouldHandle(url)
+        {
+            LISDKCallbackHandler.application(app, open: url, sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as! String!, annotation:nil)
+        }
+        return true
     }
+    
     
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
         // Linkedin sdk handle redirect

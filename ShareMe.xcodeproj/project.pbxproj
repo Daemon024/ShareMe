@@ -20,6 +20,7 @@
 		52E3F9E21DAAD38E00D2C0B7 /* ShareMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E3F9E11DAAD38E00D2C0B7 /* ShareMeUITests.swift */; };
 		77223A37BB30543466F19842 /* Pods_ShareMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECA0DD14100D6E66DB53A773 /* Pods_ShareMe.framework */; };
 		8B2034941E1C123500BCC7C0 /* LinkedinController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2034931E1C123500BCC7C0 /* LinkedinController.swift */; };
+		8BC7CAE41E26EEEE00D0E837 /* linkedin-sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BC7CAE31E26EEEE00D0E837 /* linkedin-sdk.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		687E48FE75AF5AD982B97F04 /* Pods_ShareMeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShareMeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71F692E1A1492BA566DDF8DC /* Pods-ShareMeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareMeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShareMeUITests/Pods-ShareMeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8B2034931E1C123500BCC7C0 /* LinkedinController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedinController.swift; sourceTree = "<group>"; };
+		8BC7CAE21E26EEAE00D0E837 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		8BC7CAE31E26EEEE00D0E837 /* linkedin-sdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "linkedin-sdk.framework"; sourceTree = "<group>"; };
 		B5A1DF76DA4B51B773CB5B38 /* Pods-ShareMeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareMeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShareMeUITests/Pods-ShareMeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D66EA05EDF793A5BDDDCECD9 /* Pods-ShareMeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareMeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShareMeTests/Pods-ShareMeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D730EF7B025FF7D5E860FCDA /* Pods-ShareMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShareMe/Pods-ShareMe.debug.xcconfig"; sourceTree = "<group>"; };
@@ -74,6 +77,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				77223A37BB30543466F19842 /* Pods_ShareMe.framework in Frameworks */,
+				8BC7CAE41E26EEEE00D0E837 /* linkedin-sdk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +135,8 @@
 				52CE787E1DAAECE700E78FBE /* FacebookController.swift */,
 				52588EFD1DAAF648006E4100 /* FacebookConnectedController.swift */,
 				8B2034931E1C123500BCC7C0 /* LinkedinController.swift */,
+				8BC7CAE31E26EEEE00D0E837 /* linkedin-sdk.framework */,
+				8BC7CAE21E26EEAE00D0E837 /* Header.h */,
 			);
 			path = ShareMe;
 			sourceTree = "<group>";
@@ -253,7 +259,6 @@
 				TargetAttributes = {
 					52E3F9BD1DAAD38D00D2C0B7 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = WFCVQTFG4N;
 						ProvisioningStyle = Automatic;
 					};
 					52E3F9D11DAAD38E00D2C0B7 = {
@@ -615,13 +620,18 @@
 			baseConfigurationReference = D730EF7B025FF7D5E860FCDA /* Pods-ShareMe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = WFCVQTFG4N;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ShareMe",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = ShareMe/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test29839892832.ShareMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/ShareMe/ObjectiveCHeader.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/ShareMe/Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -631,13 +641,18 @@
 			baseConfigurationReference = 2AD2F7B0230C79DC13E3CD78 /* Pods-ShareMe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = WFCVQTFG4N;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ShareMe",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = ShareMe/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test29839892832.ShareMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/ShareMe/ObjectiveCHeader.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/ShareMe/Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

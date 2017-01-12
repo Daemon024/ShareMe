@@ -8,17 +8,23 @@
 
 import Foundation
 import UIKit
-import LinkedinSwift
-class LinkedinConnectedController: UIViewController {
+import SwiftyJSON
+class LinkedinController: UIViewController {
   
-    @IBAction func setText(_ sender: UIButton) {
-        ReceiveText.text="lol"
-    }
-    @IBOutlet weak var ReceiveText: UILabel!
-    
-    let linkedinHelper = LinkedinSwiftHelper(configuration:
-        LinkedinSwiftConfiguration(
-
-       )
-    )
+    @IBAction func ExecLinkedinConnection(_ sender: UIButton){
+        LISDKSessionManager.createSession(withAuth: [LISDK_BASIC_PROFILE_PERMISSION], state: nil, showGoToAppStoreDialog: true, successBlock: { (success) in
+     let url = "https://api.linkedin.com/v1/people/~"
+        if(LISDKSessionManager.hasValidSession()){
+            LISDKAPIHelper.sharedInstance().getRequest(url, success: { (response) in
+                
+               let JSON2 = JSON(response?.data)
+                
+                }, error: {(error) in
+                    print(error)
+            })
+            }
+        }){(error)in
+            print("error\(error)")
+        }
+    } 
 }
