@@ -1,5 +1,10 @@
 # ShareMe
-Bonjour,
+
+Installation :
+
+Veuillez éxecuter la commande pod install pour récuperer les librairies
+
+L'application : 
 
 Cette application permet de récuperer l'url de réseaux sociaux,
 
